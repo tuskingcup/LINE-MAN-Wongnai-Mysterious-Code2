@@ -3,7 +3,7 @@ const secret =
 	"CYtZBsWZaZliYZocWLZlXuZZYWYeYXZsXeZXtXWpXeRYYYd!ZnYeWXoYXasnX,WXWrWPoAdWesnciGenWr"
 let zigzagRow = 4
 let maxCount = 10
-let whatIsIt = []
+let whatIsIt
 
 function removeSomeStr(input, countLimit) {
 	let strToCut = input
@@ -33,9 +33,8 @@ function removeSomeStr(input, countLimit) {
 	return strToCut
 }
 
-// for (i = 0; i < zigzagRound; i++) {
-// console.log(convert(removeSomeStr(secret,maxCount),i));
-// }
-let removedSomeStred = removeSomeStr(secret, 10)
+let removedSomeStred = removeSomeStr(secret, maxCount)
 
-console.log(zz.decodeRailFenceCipher(removedSomeStred,4));
+whatIsIt = zz.decodeRailFenceCipher(removedSomeStred,zigzagRow);
+
+console.log(whatIsIt);
